@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy cool new product</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <style>
+    img{
+        width: 400px;
+        height: auto;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="product">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/38d89819785195.562e0397644cf.png" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>{{product.name}}</h3>
+          <h5>${{product.get_display_price}}</h5>
+        </div>
+      </div>
+      <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+        <button type="submit" id="checkout-button">Checkout</button>
+      </form>
+    </section>
+</body>
+<script>
+const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+</script>
+</html>
