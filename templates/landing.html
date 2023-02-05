@@ -8,21 +8,81 @@
   <style>
     img{
         width: 400px;
-        height: auto;
+        height: 250px;
+    }
+    section{
+      display: flex;
+      height: 500px;
+    }
+    .product{
+      margin-left: 20px;
     }
   </style>
   <body>
+    <h1>Trending Products</h1>
     <section>
       <div class="product">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/38d89819785195.562e0397644cf.png" alt="The cover of Stubborn Attachments" />
+        <img src="https://w7.pngwing.com/pngs/786/500/png-transparent-counter-strike-global-offensive-counter-strike-1-6-imi-desert-eagle-video-games-weapon-weapon-game-assault-rifle-handgun.png" alt="The cover of Stubborn Attachments" />
         <div class="description">
           <h3>{{product.name}}</h3>
           <h5>${{product.get_display_price}}</h5>
         </div>
+          <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+            <button type="submit" id="checkout-button">Checkout</button>
+          </form>
       </div>
-      <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
-        <button type="submit" id="checkout-button">Checkout</button>
-      </form>
+      <div class="product">
+        <img src="https://fpschampion.com/wp-content/uploads/2022/07/howl-m4a4.png" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>{{product.name}}</h3>
+          <h5>357.00</h5>
+        </div>
+          <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+            <button type="submit" id="checkout-button">Checkout</button>
+          </form>
+      </div>
+      <div class="product">
+        <img src="https://cdn.mos.cms.futurecdn.net/wAXL2mQn2WmFY7guvD7c8X-1200-80.jpg" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>{{product.name}}</h3>
+          <h5>$100.00</h5>
+        </div>
+        <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+          <button type="submit" id="checkout-button">Checkout</button>
+        </form>
+      </div>
+    </section>
+    <section>
+      <div class="product">
+        <img src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfx_LLZTRB7dCJl5W0n-L6J6jcl2Vu5Mpjj9bN_Iv9nGu4qgE7NnfzI4KSJAI_ZVnRrlO-yLi715-4upzBynNg7iZ35nrdyke0g0wYbbdnm7XAHouazzML" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>{{product.name}}</h3>
+          <h5>${{product.get_display_price}}</h5>
+        </div>
+          <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+            <button type="submit" id="checkout-button">Checkout</button>
+          </form>
+      </div>
+      <div class="product">
+        <img src="https://knify.gg/medias/Flip-Slaughter-5.jpg" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>{{product.name}}</h3>
+          <h5>$300.00</h5>
+        </div>
+          <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+            <button type="submit" id="checkout-button">Checkout</button>
+          </form>
+      </div>
+      <div class="product">
+        <img src="https://png.pngitem.com/pimgs/s/24-246788_cs-go-primal-saber-hd-png-download.png" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>{{product.name}}</h3>
+          <h5>$200.00</h5>
+        </div>
+        <form action="{%url 'create-checkout-session' product.id %}" method="POST">{% csrf_token %}
+          <button type="submit" id="checkout-button">Checkout</button>
+        </form>
+      </div>
     </section>
 </body>
 <script>
