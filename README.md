@@ -2,7 +2,7 @@
 ## Purpose
 The purpose of this project is to create a friendly platform where video game players could trade items for money or vice versa.
 
-## Special Functionality
+## Special Functionalities
 - This platform offers a collection of items from multiple video games, so the players get the benefit of trading everything from everygame in one place. 
 - We allow players to purchase or sell a part of any given item, meaning a share of it. Similar to how stocks work, each item could be owned collectively by many players, therefore both the risk of the value depreciating and the reward of the value increasing is shared among the owners of that item. 
 
